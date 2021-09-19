@@ -597,8 +597,6 @@ Date,Country,Cumulative Deaths,New Deaths
 8/9/2021,Australia,1066,6
 9/9/2021,Australia,1076,10
 10/9/2021,Australia,1084,8
-11/9/2021,Australia,1091,7
-12/9/2021,Australia,1098,7
 22/1/2020,India,0,0
 23/1/2020,India,0,0
 24/1/2020,India,0,0
@@ -1197,8 +1195,6 @@ Date,Country,Cumulative Deaths,New Deaths
 8/9/2021,India,441749,338
 9/9/2021,India,442009,260
 10/9/2021,India,442317,308
-11/9/2021,India,442655,338
-12/9/2021,India,442874,219
 22/1/2020,US,0,0
 23/1/2020,US,0,0
 24/1/2020,US,0,0
@@ -1797,8 +1793,6 @@ Date,Country,Cumulative Deaths,New Deaths
 8/9/2021,US,652791,2146
 9/9/2021,US,654717,1926
 10/9/2021,US,658992,4275
-11/9/2021,US,659691,699
-12/9/2021,US,659970,279
 22/1/2020,United Kingdom,0,0
 23/1/2020,United Kingdom,0,0
 24/1/2020,United Kingdom,0,0
@@ -2397,5 +2391,3 @@ Date,Country,Cumulative Deaths,New Deaths
 8/9/2021,United Kingdom,133999,191
 9/9/2021,United Kingdom,134166,167
 10/9/2021,United Kingdom,134313,147
-11/9/2021,United Kingdom,134469,156
-12/9/2021,United Kingdom,134525,56
