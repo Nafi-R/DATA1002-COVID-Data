@@ -1,6 +1,7 @@
 import pandas as pd
 import csv
 
+#Finding the total sum of all cases in each country
 df = pd.read_csv('cleaned_datset_cases.csv')
 group_by_country = df.groupby('Country')
 cases_by_country = group_by_country['New_cases']
@@ -11,8 +12,10 @@ print('From 3/Jan/20 to 10/Sep/21 total number of cases by country is-\n')
 for key, value in total.items():
     print(key, ' : ', value)
 print("*** -------------------------------------- ***\n")  
-is_first_line = True
 
+# Creating dictionaries for each month as key and the number of 
+# cases per date as values in 2020
+is_first_line = True
 monthly_cases_aus = {}
 monthly_cases_india = {}
 monthly_cases_uk = {}
@@ -49,7 +52,7 @@ for row in open("cleaned_datset_cases.csv"):
                 monthly_cases_us[month].append(cases)
             else:
                 monthly_cases_us[month] = [cases]
-
+#Finding the month with the highest average number of cases for each country
 highest_avg_aus = -1
 highest_avg_india = -1
 highest_avg_uk = -1
