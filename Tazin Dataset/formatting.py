@@ -12,7 +12,7 @@ with open("cases.csv","r") as data:
             header = next(csvfile).strip("\n").split(",")
             reader = csv.reader(csvfile)
             results = filter(lambda row: row[1] == 'AU' or row[1] == 'IN' or row[1] == 'GB' or row[1] == 'US', reader)
-            with open('covid_cases.csv', 'w') as outfile:
+            with open('cleaned_datset_cases.csv', 'w') as outfile:
                 writer = csv.writer(outfile)
                 writer.writerow(header)
                 for result in results:
