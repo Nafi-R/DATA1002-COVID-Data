@@ -24,21 +24,6 @@ plt.savefig("Bar_plot_Cases.png")
 plt.title("Total Number of Cases",size=18)
 plt.show()
 ##
-#####Horizontal compund bar chart showing each countries stats on cases and vaccinations
-##
-cases_and_vaccine =  {'Cases':[68045,33174954,40330381,7132076],
-                       'Vaccinated':[8422627,171150008,17789945,43895440]}
-
-index = ['Australia','India','US','United Kingdom']
-dataFrame = pd.DataFrame(data = cases_and_vaccine)
-dataFrame.index = index
-s=dataFrame.plot.barh(rot=15, title = "Number of Cases vs Number of People Fully Vaccinated")
-plt.ticklabel_format(useOffset=False, style='plain', axis='x')
-plt.bar_label(s.containers[0],fmt='%.0f')
-plt.bar_label(s.containers[1],fmt='%.0f',padding= -30)
-plt.show(block=True)
-
-
 #Average Number of cases in 2021 vs 2020
 cases_2020 = {}
 cases_2021 = {}
@@ -66,7 +51,7 @@ for row in open("integrate_dataset.csv"):
 dict_2020= {x:cases_2020[x]/345 for x in cases_2020}
 dict_2021={x:cases_2021[x]/253 for x in cases_2021}
 k = 2
-daily_average_2020 = {key : round(dict_2020[key], k) for key in dict_2020}
+daily_average_2020 = {key : round(dict_2020[key], k) for key in dict_2020}#2 decimal places
 daily_average_2021 = {key : round(dict_2021[key], k) for key in dict_2021}
 
 df2020 = pd.DataFrame(daily_average_2020.items(),columns=['Country','Average cases per day in 2020'])
@@ -82,4 +67,18 @@ plt.bar_label(s.containers[0],fmt='%.0f') #labelling the bars with the number of
 plt.bar_label(s.containers[1],fmt='%.0f') #labelling the bars with the number of cases
 plt.title("Daily Average number of cases in 2020 and 2021",size=18)
 plt.savefig("Bar_plot_Average.png")
+plt.show(block=True)
+##
+#####Horizontal compund bar chart showing each countries stats on cases and vaccinations
+##
+cases_and_vaccine =  {'Cases':[68045,33174954,40330381,7132076],
+                       'Vaccinated':[8422627,171150008,17789945,43895440]}
+
+index = ['Australia','India','US','United Kingdom']
+dataFrame = pd.DataFrame(data = cases_and_vaccine)
+dataFrame.index = index
+s=dataFrame.plot.barh(rot=15, title = "Number of Cases vs Number of People Fully Vaccinated")
+plt.ticklabel_format(useOffset=False, style='plain', axis='x')
+plt.bar_label(s.containers[0],fmt='%.0f')
+plt.bar_label(s.containers[1],fmt='%.0f',padding= -30)
 plt.show(block=True)
